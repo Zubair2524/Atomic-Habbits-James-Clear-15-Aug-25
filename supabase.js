@@ -37,9 +37,9 @@ class SupabaseClient {
         }
     }
 
-    async updateUserProgress(email, progressData) {
+    async updateUserProgress(fullName, progressData) {
         try {
-            const response = await fetch(`${this.baseURL}/atomic_habit?email=eq.${email}`, {
+            const response = await fetch(`${this.baseURL}/atomic_habit?full_name=eq.${encodeURIComponent(fullName)}`, {
                 method: 'PATCH',
                 headers: this.headers,
                 body: JSON.stringify({
@@ -59,9 +59,9 @@ class SupabaseClient {
         }
     }
 
-    async saveQuizResult(email, quizData) {
+    async saveQuizResult(fullName, quizData) {
         try {
-            const response = await fetch(`${this.baseURL}/atomic_habit?email=eq.${email}`, {
+            const response = await fetch(`${this.baseURL}/atomic_habit?full_name=eq.${encodeURIComponent(fullName)}`, {
                 method: 'PATCH',
                 headers: this.headers,
                 body: JSON.stringify({
@@ -81,9 +81,9 @@ class SupabaseClient {
         }
     }
 
-    async getUserStats(email) {
+    async getUserStats(fullName) {
         try {
-            const response = await fetch(`${this.baseURL}/atomic_habit?email=eq.${email}`, {
+            const response = await fetch(`${this.baseURL}/atomic_habit?full_name=eq.${encodeURIComponent(fullName)}`, {
                 method: 'GET',
                 headers: this.headers
             });
@@ -103,27 +103,3 @@ class SupabaseClient {
 
 // Initialize Supabase client
 window.supabaseClient = new SupabaseClient();
-
-// Database schema creation (for reference)
-const databaseSchema = {
-    atomic_habit: `
-        CREATE TABLE IF NOT EXISTS atomic_habit (
-            id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-            full_name TEXT NOT NULL,
-            designation TEXT NOT NULL,
-            team TEXT NOT NULL,
-            city TEXT NOT NULL,
-            habit_type TEXT NOT NULL,
-            selected_habit TEXT NOT NULL,
-            current_stage INTEGER DEFAULT 1,
-            progress_percentage INTEGER DEFAULT 0,
-            score INTEGER,
-            total_questions INTEGER,
-            percentage DECIMAL(5,2),
-            created_at TIMESTAMPTZ DEFAULT NOW(),
-            last_login TIMESTAMPTZ DEFAULT NOW(),
-            updated_at TIMESTAMPTZ DEFAULT NOW(),
-            completed_at TIMESTAMPTZ
-        );
-    `
-};
