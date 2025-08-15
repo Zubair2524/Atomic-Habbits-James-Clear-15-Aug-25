@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Habit | STAR-Shaigan Learning Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="themes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-selector">
+        <button onclick="changeTheme('theme-royal')" class="theme-btn royal-theme">
+            <i class="fas fa-crown"></i>
+        </button>
+        <button onclick="changeTheme('theme-ocean')" class="theme-btn ocean-theme">
+            <i class="fas fa-water"></i>
+        </button>
+        <button onclick="changeTheme('theme-forest')" class="theme-btn forest-theme">
+            <i class="fas fa-leaf"></i>
+        </button>
+    </div>
+
+    <div class="animated-bg">
+        <div class="floating-particles"></div>
+    </div>
+
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-small">
+                <i class="fas fa-star"></i>
+                <span>STAR-Shaigan</span>
+            </div>
+            <div class="user-greeting">
+                <i class="fas fa-user-circle"></i>
+                <span id="userGreeting">Welcome, User!</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <button onclick="goBack()" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                Back
+            </button>
+            <h1 id="pageTitle">Select a Habit</h1>
+            <div class="search-container">
+                <input type="text" id="habitSearch" placeholder="Search habits..." class="search-input">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+
+        <div class="habits-grid" id="habitsGrid">
+            <!-- Habits will be populated by JavaScript -->
+        </div>
+    </main>
+
+    <script src="supabase.js"></script>
+    <script src="themes.js"></script>
+    <script src="habits-data.js"></script>
+    <script src="habits.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate | STAR-Shaigan Learning Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="themes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body class="certificate-page">
+    <div class="animated-bg certificate-bg">
+        <div class="floating-particles"></div>
+        <canvas id="celebrationCanvas"></canvas>
+    </div>
+
+    <main class="container">
+        <div class="certificate-container">
+            <div class="certificate" id="certificate">
+                <div class="certificate-border">
+                    <div class="certificate-header">
+                        <div class="logo-cert">
+                            <i class="fas fa-star"></i>
+                            <span>STAR-Shaigan Learning Portal</span>
+                        </div>
+                        <div class="certificate-title">
+                            <h1>Certificate of Achievement</h1>
+                            <div class="title-decoration"></div>
+                        </div>
+                    </div>
+
+                    <div class="certificate-body">
+                        <div class="award-text">
+                            <p class="intro-text">This is to certify that</p>
+                            <h2 class="recipient-name" id="recipientName">John Doe</h2>
+                            <p class="achievement-text">
+                                has successfully completed the comprehensive course on
+                            </p>
+                            <h3 class="course-title" id="courseTitle">Atomic Habits Mastery</h3>
+                            <p class="details" id="courseDetails">
+                                Demonstrating exceptional understanding of habit formation principles
+                                and achieving a score of <span id="finalScore">95%</span>
+                            </p>
+                        </div>
+
+                        <div class="certificate-details">
+                            <div class="detail-row">
+                                <span class="label">Date:</span>
+                                <span class="value" id="certDate">January 15, 2025</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="label">Certificate ID:</span>
+                                <span class="value" id="certId">STAR-2025-001</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="certificate-footer">
+                        <div class="signature-section">
+                            <div class="signature">
+                                <div class="signature-line"></div>
+                                <p class="signee-name">Zubair Ahmad</p>
+                                <p class="signee-title">Senior SFE Manager</p>
+                                <p class="organization">STAR-Shaigan Learning Portal</p>
+                            </div>
+                        </div>
+                        <div class="certificate-seal">
+                            <div class="seal">
+                                <i class="fas fa-certificate"></i>
+                                <div class="seal-text">CERTIFIED</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button onclick="downloadCertificate()" class="download-btn">
+                    <i class="fas fa-download"></i>
+                    Download Certificate
+                </button>
+                <button onclick="startAgain()" class="restart-btn">
+                    <i class="fas fa-redo"></i>
+                    Start New Course
+                </button>
+                <button onclick="shareResults()" class="share-btn">
+                    <i class="fas fa-share-alt"></i>
+                    Share Achievement
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="supabase.js"></script>
+    <script src="themes.js"></script>
+    <script src="animations.js"></script>
+    <script src="certificate.js"></script>
+</body>
+</html>

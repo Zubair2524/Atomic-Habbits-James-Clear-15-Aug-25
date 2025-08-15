@@ -1,0 +1,96 @@
+/* Royal Theme */
+.theme-royal {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #667eea 100%);
+    background-size: 400% 400%;
+    animation: gradient-flow 15s ease infinite;
+}
+
+.theme-royal .glass-card {
+    background: rgba(102, 126, 234, 0.1);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.theme-royal .submit-btn, .theme-royal .primary-btn {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+.theme-royal .choice-card.good-habits:hover {
+    border-color: #667eea;
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+}
+
+.theme-royal .choice-card.bad-habits:hover {
+    border-color: #764ba2;
+    box-shadow: 0 20px 40px rgba(118, 75, 162, 0.3);
+}
+
+/* Ocean Theme */
+.theme-ocean {
+    background: linear-gradient(135deg, #2196F3 0%, #21CBF3 50%, #2196F3 100%);
+    background-size: 400% 400%;
+    animation: gradient-flow 15s ease infinite;
+}
+
+.theme-ocean .glass-card {
+    background: rgba(33, 150, 243, 0.1);
+    border: 1px solid rgba(33, 150, 243, 0.2);
+}
+
+.theme-ocean .submit-btn, .theme-ocean .primary-btn {
+    background: linear-gradient(45deg, #2196F3, #21CBF3);
+}
+
+.theme-ocean .choice-card.good-habits:hover {
+    border-color: #21CBF3;
+    box-shadow: 0 20px 40px rgba(33, 203, 243, 0.3);
+}
+
+.theme-ocean .choice-card.bad-habits:hover {
+    border-color: #2196F3;
+    box-shadow: 0 20px 40px rgba(33, 150, 243, 0.3);
+}
+
+/* Forest Theme */
+.theme-forest {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 50%, #11998e 100%);
+    background-size: 400% 400%;
+    animation: gradient-flow 15s ease infinite;
+}
+
+.theme-forest .glass-card {
+    background: rgba(17, 153, 142, 0.1);
+    border: 1px solid rgba(17, 153, 142, 0.2);
+}
+
+.theme-forest .submit-btn, .theme-forest .primary-btn {
+    background: linear-gradient(45deg, #11998e, #38ef7d);
+}
+
+.theme-forest .choice-card.good-habits:hover {
+    border-color: #38ef7d;
+    box-shadow: 0 20px 40px rgba(56, 239, 125, 0.3);
+}
+
+.theme-forest .choice-card.bad-habits:hover {
+    border-color: #11998e;
+    box-shadow: 0 20px 40px rgba(17, 153, 142, 0.3);
+}
+
+@keyframes gradient-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Theme-specific animations */
+.theme-royal .floating-particles::before {
+    background-image: radial-gradient(circle, rgba(102, 126, 234, 0.3) 1px, transparent 1px);
+}
+
+.theme-ocean .floating-particles::before {
+    background-image: radial-gradient(circle, rgba(33, 203, 243, 0.3) 1px, transparent 1px);
+}
+
+.theme-forest .floating-particles::before {
+    background-image: radial-gradient(circle, rgba(56, 239, 125, 0.3) 1px, transparent 1px);
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAR-Shaigan Learning Portal | Atomic Habits Mastery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="themes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="theme-royal">
+    <div class="theme-selector">
+        <button onclick="changeTheme('theme-royal')" class="theme-btn royal-theme" title="Royal Theme">
+            <i class="fas fa-crown"></i>
+        </button>
+        <button onclick="changeTheme('theme-ocean')" class="theme-btn ocean-theme" title="Ocean Theme">
+            <i class="fas fa-water"></i>
+        </button>
+        <button onclick="changeTheme('theme-forest')" class="theme-btn forest-theme" title="Forest Theme">
+            <i class="fas fa-leaf"></i>
+        </button>
+    </div>
+
+    <div class="animated-bg">
+        <div class="floating-particles"></div>
+    </div>
+
+    <main class="container">
+        <div class="glass-card welcome-card">
+            <div class="logo-section">
+                <div class="logo">
+                    <i class="fas fa-star"></i>
+                    <h1>STAR-Shaigan Learning Portal</h1>
+                </div>
+                <p class="subtitle">Master Your Habits, Transform Your Life</p>
+                <div class="book-reference">
+                    <i class="fas fa-book"></i>
+                    <span>Based on "Atomic Habits" by James Clear</span>
+                </div>
+            </div>
+
+            <form id="userForm" class="user-form">
+                <div class="form-group">
+                    <label for="fullName">
+                        <i class="fas fa-user"></i>
+                        Full Name
+                    </label>
+                    <input type="text" id="fullName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="designation">
+                        <i class="fas fa-briefcase"></i>
+                        Designation
+                    </label>
+                    <input type="text" id="designation" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="team">
+                        <i class="fas fa-users"></i>
+                        Team
+                    </label>
+                    <input type="text" id="team" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">
+                        <i class="fas fa-map-marker-alt"></i>
+                        City
+                    </label>
+                    <input type="text" id="city" required>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-rocket"></i>
+                    Begin Your Transformation
+                    <div class="btn-glow"></div>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script src="supabase.js"></script>
+    <script src="themes.js"></script>
+    <script src="animations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

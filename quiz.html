@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | STAR-Shaigan Learning Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="themes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-selector">
+        <button onclick="changeTheme('theme-royal')" class="theme-btn royal-theme">
+            <i class="fas fa-crown"></i>
+        </button>
+        <button onclick="changeTheme('theme-ocean')" class="theme-btn ocean-theme">
+            <i class="fas fa-water"></i>
+        </button>
+        <button onclick="changeTheme('theme-forest')" class="theme-btn forest-theme">
+            <i class="fas fa-leaf"></i>
+        </button>
+    </div>
+
+    <div class="animated-bg">
+        <div class="floating-particles"></div>
+    </div>
+
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-small">
+                <i class="fas fa-star"></i>
+                <span>STAR-Shaigan</span>
+            </div>
+            <div class="user-greeting">
+                <i class="fas fa-user-circle"></i>
+                <span id="userGreeting">Welcome, User!</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressBar"></div>
+                </div>
+                <div class="quiz-info">
+                    <span id="questionCounter">Question 1 of 10</span>
+                    <div class="score-display">
+                        <i class="fas fa-star"></i>
+                        <span id="currentScore">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-card" id="questionCard">
+                <div class="question-content">
+                    <h2 id="questionText">Loading question...</h2>
+                    <div class="options-container" id="optionsContainer">
+                        <!-- Options will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-actions">
+                <button id="nextBtn" onclick="nextQuestion()" class="primary-btn" style="display: none;">
+                    <i class="fas fa-arrow-right"></i>
+                    Next Question
+                </button>
+                <button id="finishBtn" onclick="finishQuiz()" class="primary-btn" style="display: none;">
+                    <i class="fas fa-trophy"></i>
+                    Finish Quiz
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="supabase.js"></script>
+    <script src="themes.js"></script>
+    <script src="quiz-data.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

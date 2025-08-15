@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | STAR-Shaigan Learning Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="themes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-selector">
+        <button onclick="changeTheme('theme-royal')" class="theme-btn royal-theme">
+            <i class="fas fa-crown"></i>
+        </button>
+        <button onclick="changeTheme('theme-ocean')" class="theme-btn ocean-theme">
+            <i class="fas fa-water"></i>
+        </button>
+        <button onclick="changeTheme('theme-forest')" class="theme-btn forest-theme">
+            <i class="fas fa-leaf"></i>
+        </button>
+    </div>
+
+    <div class="animated-bg">
+        <div class="floating-particles"></div>
+        <div class="balloons-container"></div>
+        <canvas id="fireworks"></canvas>
+    </div>
+
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-small">
+                <i class="fas fa-star"></i>
+                <span>STAR-Shaigan</span>
+            </div>
+            <div class="user-greeting">
+                <i class="fas fa-user-circle"></i>
+                <span id="userGreeting">Welcome, User!</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="welcome-content">
+            <div class="glass-card hero-card">
+                <div class="hero-content">
+                    <h1 class="welcome-title">
+                        <span class="gradient-text">Transform Your Life</span>
+                        <br>One Habit at a Time
+                    </h1>
+                    <p class="hero-description">
+                        Discover the power of atomic habits and create lasting change through small, 
+                        consistent actions that compound into remarkable results.
+                    </p>
+                </div>
+
+                <div class="habit-choices">
+                    <div class="choice-card good-habits" onclick="selectHabitType('good')">
+                        <div class="choice-icon">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        <h3>I want to adopt good habits</h3>
+                        <p>Build positive routines that will enhance your life and help you achieve your goals</p>
+                        <div class="choice-glow"></div>
+                    </div>
+
+                    <div class="choice-card bad-habits" onclick="selectHabitType('bad')">
+                        <div class="choice-icon">
+                            <i class="fas fa-minus-circle"></i>
+                        </div>
+                        <h3>I want to get rid of bad habits</h3>
+                        <p>Break negative patterns and replace them with healthier alternatives</p>
+                        <div class="choice-glow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Good Habits</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Bad Habits</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Stages</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="supabase.js"></script>
+    <script src="themes.js"></script>
+    <script src="animations.js"></script>
+    <script src="welcome.js"></script>
+</body>
+</html>
